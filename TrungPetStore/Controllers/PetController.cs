@@ -11,16 +11,16 @@ using TrungPetStore.Models;
 namespace TrungPetStore.Controllers
 {
     [Authorize]
-    public class ManageController : Controller
+    public class PetController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public ManageController()
+        public PetController()
         {
         }
 
-        public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+        public PetController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;

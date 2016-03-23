@@ -3,5 +3,28 @@
     ViewBag.Title = "Inventory";
 }
 
-<h2>Inventory</h2>
+<h2>Inventory of Pets</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date Received</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.DateReceived</td>
+            <td>@item.Quantity</td>
+            <td>$@item.Price</td>
+            <td>@Html.ActionLink("Details", "Details", new { id = item.ID })</td>
+        </tr>
+    }
+
+</table>
 
