@@ -14,7 +14,7 @@
         <th>Price</th>
     </tr>
 
-    @foreach (var item in Model)
+    @*@foreach (var item in Model)
     {
         <tr>
             <td>@item.Name</td>
@@ -24,7 +24,7 @@
             <td>$@item.Price</td>
             <td>@Html.ActionLink("Details", "Details", new { id = item.ID })</td>
         </tr>
-    }
+    }*@
 
 </table>
 
